@@ -1,0 +1,30 @@
+/*
+** vm_functions.h for include in /home/chapea_o/travail/corewar/git_corewar/corewar/vm/include
+** 
+** Made by sergioandres baezserrano
+** Login   <baezse_s@epitech.net>
+** 
+** Started on  Thu Dec 06 20:41:15 2012 sergioandres baezserrano
+<<<<<<< HEAD
+** Last update Tue Dec 11 17:17:53 2012 sergioandres baezserrano
+=======
+** Last update Tue Dec 11 15:59:56 2012 olivier chapeau
+>>>>>>> 4a9b90143f8376ac0731f5106058cd7cfbd209ad
+*/
+
+#ifndef VM_FUNCTIONS_H_
+#  define VM_FUNCTIONS_H_
+
+#  include <sys/types.h>
+#  include "op.h"
+#  include "list.h"
+
+int	read_header(t_list *files, t_vm *vm);
+int	open_files(t_list *files);
+int	read_program(t_list *files, t_vm *vm);
+void	print_memory(t_vm *vm, int i, int j);
+void	print_address(int i);
+void	dump_memory(t_vm *vm);
+int	fill_vm(t_link *temp_w, t_link *temp_f, t_vm *vm, int (*index)[2]);
+
+#endif /* !VM_FUNCTIONS_H_ */

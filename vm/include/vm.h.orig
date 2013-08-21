@@ -1,0 +1,36 @@
+/*
+** vm.h for include in /home/chapea_o/travail/corewar/git_corewar/corewar/vm/include
+** 
+** Made by olivier chapeau
+** Login   <chapea_o@epitech.net>
+** 
+** Started on  Thu Dec 06 19:09:56 2012 olivier chapeau
+<<<<<<< HEAD
+** Last update Wed Dec 12 14:10:06 2012 sergioandres baezserrano
+=======
+** Last update Wed Dec 12 11:50:35 2012 olivier chapeau
+>>>>>>> a4bff3506fa2c942c674a7e8e1c5e6043bfc9f74
+*/
+
+#ifndef VM_H_
+# define VM_H_
+
+# include "op.h"
+# include "list.h"
+
+struct		s_vm
+{
+  unsigned char	memory[MEM_SIZE];
+  unsigned int	dump_cycles;
+  int	        options_flags;
+  t_list	*warriors;
+  t_list	*processes;
+} ;
+
+typedef struct s_vm t_vm;
+
+int	init_vm(t_vm *vm, t_list **files);
+int	prepare_vm(t_list *files, t_vm *vm);
+int	destroy_vm(t_vm *vm, t_list **files);
+
+#endif /* !VM_H_ */
